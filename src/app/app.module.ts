@@ -5,7 +5,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { TelaPrincipalModule } from './tela-principal/tela-principal.module';
-import { MainPageComponent } from './tela-principal/main-page/main-page.component';
+
+import { LogarComponent } from './login/logar/logar.component';
+// import { MainPageComponent } from './tela-principal/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,10 @@ import { MainPageComponent } from './tela-principal/main-page/main-page.componen
     RouterModule.forRoot([
       {
         path: '',
-        component: MainPageComponent,
+        component: LogarComponent,
         canActivate: []
-      }
-    ])
+      },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

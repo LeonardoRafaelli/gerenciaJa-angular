@@ -1,5 +1,6 @@
 <div>
-    logar works!!
-    <input type="text" placeholder="Usuário">
-    <input type="password" placeholder="Senha">
+    <input type="text" placeholder="Usuário" [(ngModel)]="user">
+    <br>
+    <input type="password" placeholder="Senha" [(ngModel)]="pass">
+    <button (click)="logar()">Login</button>
 </div>

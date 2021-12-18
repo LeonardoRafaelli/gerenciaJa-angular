@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  logOut(){
+    localStorage.removeItem("USERNAME");
+    localStorage.removeItem("PASSWORD");
+    this.route.navigate([''])
+  }
+
+  toPedidos(){
+    this.route.navigate(['/pedidos'])
+  }
+
+  toProdutos(){
+    this.route.navigate(['/produtos'])
   }
 
 }

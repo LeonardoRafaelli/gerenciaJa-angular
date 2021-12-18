@@ -1,0 +1,7 @@
+<div *ngFor="let produto of productsList">
+    Produto de id: {{produto}};
+    <button (click)="abrirProduto(produto)">
+    Acessar Produto
+  </button>
+</div>
+<button (click)="voltar()">Voltar</button>

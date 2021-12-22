@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  declarations: []
+  declarations: [CarrinhoComponent]
 })
+
 export class PedidosModule { }

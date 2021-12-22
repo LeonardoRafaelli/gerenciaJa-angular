@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { RouterModule } from '@angular/router';
+import { CarrinhoComponent } from '../pedidos/carrinho/carrinho.component';
 
 
 @NgModule({
@@ -12,9 +13,10 @@ import { RouterModule } from '@angular/router';
       {path: 'produtos', children: [
         {path: '', component: ProdutosComponent},
         {path: ':id', component: ProdutoComponent}
-      ]}
+      ]},
+      {path: 'pedidos', component: CarrinhoComponent}
     ])
   ],
-  declarations: [ProdutosComponent, ProdutoComponent]
+  declarations: [ProdutosComponent, ProdutoComponent, CarrinhoComponent]
 })
 export class ProdutosModule { }

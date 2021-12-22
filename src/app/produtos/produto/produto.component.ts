@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -11,8 +10,6 @@ import { Output, EventEmitter } from '@angular/core';
 export class ProdutoComponent implements OnInit {
 
   idProduto;
-
-  @Output() onClick = new EventEmitter<any>();
 
   constructor(
     private route: ActivatedRoute,
@@ -30,7 +27,7 @@ export class ProdutoComponent implements OnInit {
 
   toShopCar(){
     alert("Produto Adicionado ao Carrinho");
-    this.router.navigate(['/produtos'])
+    this.router.navigate(['/pedidos'])
   }
 
 }

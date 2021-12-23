@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-produto',
@@ -11,11 +11,15 @@ export class ProdutoComponent implements OnInit {
 
   idProduto;
 
+  @Output() onClick = new EventEmitter<any>();
+  @Input() valor;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router
   ) {
     this.idProduto = route.snapshot.paramMap.get('id');
+    this.valor = this.idProduto;
   }
 
   ngOnInit() {
@@ -24,10 +28,5 @@ export class ProdutoComponent implements OnInit {
   voltar(){
     this.router.navigate(['/produtos'])
   };
-
-  toShopCar(){
-    alert("Produto Adicionado ao Carrinho");
-    this.router.navigate(['/pedidos'])
-  }
 
 }

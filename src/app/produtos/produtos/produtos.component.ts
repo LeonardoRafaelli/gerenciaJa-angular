@@ -27,4 +27,8 @@ export class ProdutosComponent implements OnInit {
     this.route.navigate(['/main-page/'])
   }
 
+  adicionarProduto(){
+    this.route.navigate(['/produtos/adicionarProduto'])
+  }
+
 }

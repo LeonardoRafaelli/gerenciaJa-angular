@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarrinhoComponent implements OnInit {
 
+  produtos = [];
+
   constructor() { }
 
   ngOnInit() {
+    
+  }
+
+  pegarIdProduto(evento){
+    console.log(evento);
+    for(let i of evento){
+      this.produtos.push(i.value)
+    }
   }
 
 }

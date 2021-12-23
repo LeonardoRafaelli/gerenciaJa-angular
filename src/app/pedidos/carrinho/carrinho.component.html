@@ -1,3 +1,7 @@
-<p>
-  carrinho works!
-</p>
+<div>
+    <app-produto (onClick)="pegarIdProduto($event)"></app-produto>
+    carrinho works!
+    <div *ngFor="let produto of produtos">
+        {{produto}}
+    </div>
+</div>
